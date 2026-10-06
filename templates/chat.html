@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ragシステム</title>
+    <link rel="stylesheet" href="/static/css/chat.css">
+    <script src="/static/js/chat.js" defer></script>
+</head>
+<body>
+    <main class="chat-container">
+        <header class="chat-header">
+            <h1>ragシステム</h1>
+            <p>文書に関する質問を入力してください。</p>
+        </header>
+
+        <section id="chat-messages" class="chat-messages" aria-label="チャット履歴" aria-live="polite">
+            <div class="message assistant-message">
+                <p>こんにちは。どのようなことをお調べしますか？</p>
+            </div>
+        </section>
+
+        <form id="chat-form" class="chat-form">
+            <label for="question" class="visually-hidden">
+                質問を入力
+            </label>
+            <textarea
+                id="question"
+                name="question"
+                placeholder="質問を入力してください..."
+                rows="2"
+                required
+            ></textarea>
+            <button type="submit" id="send-button">送信</button>
+        </form>
+    </main>
+</body>
+</html>
